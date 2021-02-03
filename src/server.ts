@@ -1,8 +1,9 @@
-declare module 'express';
 declare var require: any;
 declare var process: any;
 
 import express from 'express';
+declare module 'express' {}
+
 const soapRequest = require('easy-soap-request');
 const { soap } = require('strong-soap');
 require('dotenv/config');
