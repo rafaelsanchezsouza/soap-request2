@@ -1,6 +1,3 @@
-declare var require: NodeRequire;
-declare var process: Process;
-
 const express = require('express');
 
 const soapRequest = require('easy-soap-request');
