@@ -14,10 +14,6 @@ var util = require('util');
 var parser = new xml2js.Parser();
 let token: string;
 
-expressApp.get('/', (req, res) => {
- res.
-};
-
 expressApp
   .use(xmlparser())
   .post('/webservice', (req, res, body) => {
@@ -44,7 +40,7 @@ expressApp
       }
     );
   })
-  .listen(PORT, () => console.log('Waiting for incoming requests'));
+  .listen(PORT, () => console.log(`Our app is running on port ${PORT}`));
 
 const invokeOperations = (
   login: string,
@@ -85,7 +81,7 @@ const invokeOperations = (
     // console.log(headers);
     // console.log(body);
     // console.log(statusCode);
-    parser.parseString(body, function (err, result) {
+    parser.parseString(body, function (err: any, result: any) {
       token =
         result['soap:Envelope']['soap:Body'][0][
           'AutenticacaoFuncionarioResponse'
