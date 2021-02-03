@@ -16,7 +16,7 @@ let token: string;
 
 expressApp
   .use(xmlparser())
-  .post('/webservice', (req, res, body) => {
+  .post('/webservice', (req: any, res: any, body: any) => {
     const login =
       req.body['soap:envelope']['soap:body'][0]['autenticacaofuncionario'][0][
         'login'
