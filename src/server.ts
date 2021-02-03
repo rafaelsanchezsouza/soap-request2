@@ -1,8 +1,7 @@
-declare var require: any;
-declare var process: any;
+declare var require: NodeRequire;
+declare var process: Process;
 
-import express from 'express';
-declare module 'express' {}
+const express = require('express');
 
 const soapRequest = require('easy-soap-request');
 const { soap } = require('strong-soap');
