@@ -1,3 +1,6 @@
+declare var require: any;
+declare var process: any;
+
 const express = require('express');
 
 const soapRequest = require('easy-soap-request');
